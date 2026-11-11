@@ -1,0 +1,24 @@
+{
+  "rules": [
+    { "id": "ADR001", "severity": "error", "summary": "File name is not NNNN-lowercase-title.md" },
+    { "id": "ADR002", "severity": "error", "summary": "Two files share a number" },
+    { "id": "ADR003", "severity": "warning", "summary": "Numbering has a gap" },
+    { "id": "ADR004", "severity": "error", "summary": "Heading is not '# NNNN. Title' or its number differs from the file name" },
+    { "id": "ADR005", "severity": "error", "summary": "Status or Date line is missing" },
+    { "id": "ADR006", "severity": "error", "summary": "Status is not proposed, accepted, rejected, deprecated or superseded" },
+    { "id": "ADR007", "severity": "error", "summary": "Date is not a real YYYY-MM-DD date" },
+    { "id": "ADR008", "severity": "error", "summary": "A required section is missing (Context, Options considered, Decision, Consequences)" },
+    { "id": "ADR009", "severity": "error", "summary": "Fewer than two options are recorded" },
+    { "id": "ADR010", "severity": "error", "summary": "The Decision does not name the option it chose" },
+    { "id": "ADR011", "severity": "error", "summary": "Consequences lacks a non-empty Good or Bad subsection" },
+    { "id": "ADR012", "severity": "error", "summary": "Supersedes or Superseded by points to an ADR that does not exist" },
+    { "id": "ADR013", "severity": "error", "summary": "A supersession link is not reciprocal" },
+    { "id": "ADR014", "severity": "error", "summary": "Status and Superseded by disagree" },
+    { "id": "ADR015", "severity": "error", "summary": "Template placeholder text is still present" },
+    { "id": "ADR016", "severity": "warning", "summary": "Proposed for longer than the stale limit" },
+    { "id": "ADR017", "severity": "warning", "summary": "No Review section" },
+    { "id": "ADR018", "severity": "warning", "summary": "Title is longer than 80 characters" },
+    { "id": "ADR019", "severity": "warning", "summary": "Decision section is longer than 150 words" },
+    { "id": "ADR020", "severity": "warning", "summary": "Date is in the future" }
+  ]
+}

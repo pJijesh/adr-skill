@@ -1,0 +1,32 @@
+name: Tests
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        node-version: [18, 20, 22]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version }}
+      - name: Generated files are current
+        run: node scripts/build.mjs --check
+      - name: Run tests
+        run: node --test
+      - name: Lint the worked example
+        run: node skills/adr/scripts/adr.mjs lint examples/adr --today 2026-11-11
+      - name: Example index is current
+        run: node skills/adr/scripts/adr.mjs index examples/adr --check
+      - name: Install dry run for every agent
+        run: node scripts/install.mjs all --dry-run

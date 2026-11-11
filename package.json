@@ -1,0 +1,21 @@
+{
+  "name": "adr-skill",
+  "version": "1.0.0",
+  "description": "A skill for Claude Code, Codex, Cursor and OpenCode that writes honest Architecture Decision Records, with a linter, a status lifecycle and an index builder.",
+  "type": "module",
+  "license": "MIT",
+  "author": "Puliyappottammal Jijesh",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pJijesh/adr-skill.git"
+  },
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "check": "node scripts/build.mjs --check",
+    "test": "node --test",
+    "lint:example": "node skills/adr/scripts/adr.mjs lint examples/adr --today 2026-11-11"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
